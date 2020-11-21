@@ -1,33 +1,38 @@
 {
-    "name": "silverstripe-module/skeleton",
-    "description": "A skeleton for SilverStripe modules.",
+    "name": "chrometoaster/silverstripe-blurhash",
+    "description": "Get blur hash (blurha.sh) for images",
     "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",
-        "CMS"
+        "image",
+        "blur",
+        "hash",
+        "blurha.sh"
     ],
+    "homepage": "http://github.com/chrometoasters/silverstripe-blurhash",
     "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Chrometoaster Ltd.",
+            "email": "opensource@chrometoaster.com"
+        }
+    ],
+    "support": {
+        "issues": "http://github.com/chrometoasters/silverstripe-blurhash/issues"
+    },
+    "config": {
+        "process-timeout": 600
+    },
     "require": {
         "silverstripe/framework": "^4.0",
         "silverstripe/admin": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^5.7",
-        "squizlabs/php_codesniffer": "^3.0"
+        "chrometoaster/backend-coding-standards": "~1.1"
     },
-    "autoload": {
-        "psr-4": {
-            "SilverStripeModule\\Skeleton\\": "src/",
-            "SilverStripeModule\\Skeleton\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "2.x-dev"
-        },
-        "expose": [
-            "client/dist"
-        ]
+    "scripts": {
+        "lint": "parallel-lint src --colors && ecs check src --ansi",
+        "lint-fix": "parallel-lint src --colors && ecs check src --fix --ansi"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

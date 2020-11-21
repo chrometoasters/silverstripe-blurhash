@@ -24,8 +24,10 @@
         "process-timeout": 600
     },
     "require": {
-        "silverstripe/framework": "^4.0",
-        "silverstripe/admin": "^1.0"
+        "ext-gd": "*",
+        "silverstripe/admin": "^1",
+        "silverstripe/framework": "^4",
+        "kornrunner/blurhash": "^1.1"
     },
     "require-dev": {
         "chrometoaster/backend-coding-standards": "~1.1"

@@ -1,0 +1,6 @@
+---
+Name: ct-silverstripe-blurhash
+---
+SilverStripe\Assets\Image:
+  extensions:
+    - Chrometoaster\Blurhash\Extensions\BlurhashImageExtension
